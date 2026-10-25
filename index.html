@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Santa Clara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Clínica Santa Clara</h1>
+    <div>
+      <button id="btn-aumentar">A+</button>
+      <button id="btn-diminuir">A-</button>
+      <button id="btn-contraste">Alto Contraste</button>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div>
+      <h2>Atendimento Médico Especializado</h2>
+      <p>Agende sua consulta com nossos profissionais qualificados.</p>
+    </div>
+   <img src="img/logo.png" alt="Médico">
+  </section>
+
+  <main class="container">
+    <form id="form-agendamento" class="card">
+      <h3>Agendar Consulta</h3>
+      <input type="text" id="nome" placeholder="Nome do Paciente" required>
+      <select id="especialidade" required>
+        <option value="">Selecione a Especialidade</option>
+        <option value="Cardiologia">Cardiologia</option>
+        <option value="Clínica Geral">Clínica Geral</option>
+        <option value="Oftalmologia">Oftalmologia</option>
+      </select>
+      <input type="date" id="data" required>
+      <button type="submit">Agendar</button>
+    </form>
+
+    <section class="card">
+      <div class="filtros">
+        <h3>Consultas</h3>
+        <div>
+          <button onclick="filtrar('todas')">Todas</button>
+          <button onclick="filtrar('Agendado')">Agendadas</button>
+          <button onclick="filtrar('Concluído')">Concluídas</button>
+        </div>
+      </div>
+      <div id="lista-consultas"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
